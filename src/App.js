@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './asset/style.css';
+
+import renderRouters from './core/routersConfig.jsx';
+import routers from './routers.jsx';
+import AppProvider from './core/AppProvider.jsx';
+
+export let Context = React.createContext()
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppProvider>
+      {renderRouters(routers)}
+    </AppProvider>
   );
 }
 

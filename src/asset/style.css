@@ -1,0 +1,25 @@
+.textbox.white
+{
+    color: black;
+}
+.nav ul li.active 
+{
+    background: unset;
+}
+.nav ul li a.active 
+{
+    background: #00afab;
+    color: black;
+}
+.loading-page
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: #20afab;
+    border-radius: 100%;
+    transform: scale(0);
+    transition: all .5s ease;
+}
